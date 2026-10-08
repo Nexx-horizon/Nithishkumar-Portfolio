@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nithishkumar H | Portfolio</title>
+<meta name="description" content="Portfolio of Nithishkumar H, second-year CSE student and full stack development intern.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2F6FA;
+    --panel:#FFFFFF;
+    --ink:#13233F;
+    --muted:#52617A;
+    --line:#D5DEEA;
+    --blue:#2954E0;
+    --blue-soft:#E3EAFD;
+    --sun:#F4B400;
+    --head:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+    --body:"Public Sans","Segoe UI",Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);background:var(--paper);color:var(--ink);line-height:1.65;font-size:17px}
+  a{color:var(--blue)}
+  :focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
+
+  nav{position:sticky;top:0;background:rgba(242,246,250,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:12px;padding-bottom:12px}
+  .brand{font-family:var(--head);font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}
+  nav ul{display:flex;gap:18px;list-style:none;flex-wrap:wrap}
+  nav ul a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.95rem}
+  nav ul a:hover{color:var(--blue)}
+
+  /* Hero: a small task list that echoes the task manager project */
+  .hero{padding:64px 0 48px}
+  .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+  .hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.3rem,6vw,3.7rem);line-height:1.05;letter-spacing:-.02em}
+  .hero p.lead{margin-top:18px;color:var(--muted);max-width:34em}
+  .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+  .btn.primary{background:var(--ink);color:#fff}
+  .btn.primary:hover{background:var(--blue);border-color:var(--blue)}
+  .btn.ghost{color:var(--ink)}
+  .btn.ghost:hover{background:var(--blue-soft)}
+
+  .tasks{background:var(--panel);border:2px solid var(--ink);border-radius:14px;padding:22px;box-shadow:8px 8px 0 var(--sun)}
+  .tasks h2{font-family:var(--head);font-size:1.1rem;margin-bottom:4px}
+  .tasks .hint{font-size:.85rem;color:var(--muted);margin-bottom:14px}
+  .tasks label{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line);cursor:pointer}
+  .tasks input{width:20px;height:20px;accent-color:var(--blue);flex:none}
+  .tasks input:checked + span{text-decoration:line-through;color:var(--muted)}
+
+  section{padding:52px 0;border-top:1px solid var(--line)}
+  h2.title{font-family:var(--head);font-weight:800;font-size:1.9rem;letter-spacing:-.01em;margin-bottom:22px}
+  .about p{max-width:40em;color:var(--muted)}
+  .about p + p{margin-top:12px}
+
+  .skills{display:flex;flex-wrap:wrap;gap:10px}
+  .skills span{background:var(--blue-soft);color:var(--ink);padding:8px 16px;border-radius:999px;font-weight:600}
+
+  .item{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .item + .item{margin-top:16px}
+  .item h3{font-family:var(--head);font-size:1.25rem}
+  .item .meta{color:var(--muted);font-size:.92rem;margin:2px 0 10px}
+  .item p{color:var(--muted)}
+  .tags{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+  .tags span{border:1px solid var(--line);border-radius:6px;padding:2px 10px;font-size:.85rem;color:var(--ink)}
+
+  .contact p{color:var(--muted);margin-bottom:16px}
+  footer{padding:30px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+  @media (max-width:760px){
+    .hero .wrap{grid-template-columns:1fr}
+    nav ul{gap:12px}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Nithishkumar H</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Internship</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Hi, I'm Nithishkumar. I build web applications.</h1>
+      <p class="lead">Second-year Computer Science Engineering student at JNN Institute of Engineering. I completed a full stack development internship and built a task manager web app.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn ghost" href="mailto:nithish27x@gmail.com">Email me</a>
+      </div>
+    </div>
+    <div class="tasks" aria-label="My progress checklist">
+      <h2>My checklist</h2>
+      <p class="hint">Tap an item to tick it off.</p>
+      <label><input type="checkbox" checked><span>Learn C, C++ and HTML</span></label>
+      <label><input type="checkbox" checked><span>Complete a full stack internship</span></label>
+      <label><input type="checkbox" checked><span>Build a task manager web app</span></label>
+      <label><input type="checkbox"><span>Build more projects</span></label>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="about" id="about">
+    <div class="wrap">
+      <h2 class="title">About me</h2>
+      <p>I'm a BE Computer Science Engineering student at JNN Institute of Engineering with a CGPA of 8.5. I'm from Gummidipoondi, Tamil Nadu, and finished school at MKVV (CBSE).</p>
+      <p>I enjoy turning ideas into working web applications, and I'm learning something new with every project I build.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2 class="title">Skills</h2>
+      <div class="skills">
+        <span>C</span>
+        <span>C++</span>
+        <span>HTML</span>
+        <span>Full stack development</span>
+        <span>Teamwork</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2 class="title">Internship</h2>
+      <div class="item">
+        <h3>Full Stack Development Intern</h3>
+        <p class="meta">Codec Technologies</p>
+        <p>Worked on building web applications covering both the front end and the back end, and applied what I learned by building a task manager app.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2 class="title">Projects</h2>
+      <!-- To add a project later: copy one <div class="item"> block below and edit the text. -->
+      <div class="item">
+        <h3>Task Manager Web Application</h3>
+        <p class="meta">Internship project</p>
+        <p>A simple web application to add and manage daily tasks in one place, so nothing gets forgotten.</p>
+        <div class="tags"><span>Full stack</span><span>Web app</span></div>
+      </div>
+      <div class="item">
+        <h3>Personal Portfolio Website</h3>
+        <p class="meta">This website</p>
+        <p>The page you're viewing. It is written in HTML and CSS and hosted for free with GitHub Pages.</p>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>GitHub Pages</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="title">Contact</h2>
+      <p>Want to talk about a project or an opportunity? Send me an email.</p>
+      <a class="btn primary" href="mailto:nithish27x@gmail.com">nithish27x@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Nithishkumar H</div>
+</footer>
+
+</body>
+</html>
